@@ -1,0 +1,21 @@
+{
+  "name": "learningsass",
+  "version": "1.0.0",
+  "description": "Packge.json file script setup and step basice project",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass:css",
+    "dev": "live-server",
+    "start": "npm-run-all --parallel dev watch:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@compodoc/live-server": "^1.2.3",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}
