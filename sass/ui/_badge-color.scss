@@ -1,0 +1,282 @@
+.badge {
+  box-shadow: $shadow;
+  font-weight: 500;
+  border-radius: $default-border-radius;
+  padding: 5px 7px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  line-height: 0.75em;
+
+  &.badge-md {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  &.badge-pill {
+    border-radius: 50px;
+  }
+
+  &.badge-outline {
+    border: 1px solid;
+  }
+
+  &.badge-indicator {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+
+    &:empty {
+      display: inline-block;
+    }
+
+    &.badge-indicator-sm {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+
+
+.badge-custom {
+  background: $primary;
+  color: $white;
+}
+
+.badge-primary {
+  background-color: $primary;
+
+  /*box-shadow: 0 5px 5px rgba($primary,0.5);*/
+  &.badge-outline {
+    border-color: $primary;
+    color: $primary;
+    background-color: rgba($primary, 0.05);
+  }
+}
+
+.badge-secondary {
+  background-color: $secondary;
+
+  /*box-shadow: 0 5px 5px rgba($secondary,0.3);*/
+  &.badge-outline {
+    border-color: $secondary;
+    color: $secondary;
+    background-color: rgba($secondary, 0.05);
+  }
+}
+
+.badge-success {
+  background-color: $success;
+
+  /*box-shadow: 0 5px 5px rgba($success,0.3);*/
+  &.badge-outline {
+    border-color: $success;
+    color: $success;
+    background-color: rgba($success, 0.05);
+  }
+}
+
+.badge-teal {
+  background-color: $teal;
+
+  /*box-shadow: 0 5px 5px rgba($teal,0.3);*/
+  &.badge-outline {
+    border-color: $teal;
+    color: $teal;
+    background-color: rgba($teal, 0.05);
+  }
+}
+
+.badge-info {
+  background-color: $info;
+
+  /*box-shadow: 0 5px 5px rgba($info,0.3);*/
+  &.badge-outline {
+    border-color: $info;
+    color: $info;
+    background-color: rgba($info, 0.05);
+  }
+}
+
+.badge-warning {
+  background-color: $warning;
+  color: $white;
+
+  /*box-shadow: 0 5px 5px rgba($warning,0.3);*/
+  &.badge-outline {
+    border-color: $warning;
+    color: $warning;
+    background-color: rgba($warning, 0.05);
+  }
+}
+
+.badge-danger {
+  background-color: $danger;
+
+  /*box-shadow: 0 5px 5px rgba($danger,0.3);*/
+  &.badge-outline {
+    border-color: $danger;
+    color: $danger;
+    background-color: rgba($danger, 0.05);
+  }
+}
+
+.badge-purple {
+  background-color: $purple;
+  color: $white;
+
+  /*box-shadow: 0 5px 5px rgba($purple,0.3);*/
+  &.badge-outline {
+    border-color: $purple;
+    color: $purple;
+    background-color: rgba($purple, 0.05);
+  }
+}
+
+.badge-pink {
+  background-color: $pink;
+  color: $white;
+
+  /*box-shadow: 0 5px 5px rgba($pink,0.3);*/
+  &.badge-outline {
+    border-color: $pink;
+    color: $pink;
+    background-color: rgba($pink, 0.05);
+  }
+}
+
+.badge-blue {
+  background-color: $blue;
+  color: $white;
+
+  /*box-shadow: 0 5px 5px rgba($blue,0.3);*/
+  &.badge-outline {
+    border-color: $blue;
+    color: $blue;
+    background-color: rgba($blue, 0.05);
+  }
+}
+
+.badge-orange {
+  background-color: $orange;
+  color: $white;
+
+  /*box-shadow: 0 5px 5px rgba($orange,0.3);*/
+  &.badge-outline {
+    border-color: $orange;
+    color: $orange;
+    background-color: rgba($orange, 0.05);
+  }
+}
+
+
+
+
+.badge-light {
+  background-color: $white;
+  /*box-shadow: 0 5px 5px rgba($gray-600,0.3);*/
+  color: $dark;
+
+  &.badge-outline {
+    border-color: $gray-600;
+    color: $gray-900;
+    background-color: rgba($gray-900, 0.05);
+  }
+}
+
+.badge-dark {
+  background-color: $dark;
+
+  /*box-shadow: 0 5px 5px rgba($dark,0.3);*/
+  &.badge-outline {
+    border-color: $dark;
+    color: $dark;
+    background-color: rgba($dark, 0.05);
+  }
+}
+
+/*Badge Soft Color*/
+
+.badge-soft-success {
+  color: $success;
+  background-color: rgba($success, .2);
+}
+
+.badge-soft-primary {
+  color: $primary;
+  background-color: rgba($primary, .2);
+}
+
+.badge-soft-secondary {
+  color: $secondary;
+  background-color: rgba($secondary, .2);
+}
+
+.badge-soft-danger {
+  color: $danger;
+  background-color: rgba($danger, .2);
+}
+
+.badge-soft-info {
+  color: $info;
+  background-color: rgba($info, .2);
+}
+
+.badge-soft-warning {
+  color: $warning;
+  background-color: rgba($warning, .2);
+}
+
+.badge-soft-pink {
+  color: $pink;
+  background-color: rgba($pink, .2);
+}
+
+.badge-soft-purple {
+  color: $purple;
+  background-color: rgba($purple, .2);
+}
+
+.badge-soft-blue {
+  color: $blue;
+  background-color: rgba($blue, .2);
+}
+
+.badge-soft-orange {
+  color: $orange;
+  background-color: rgba($orange, .2);
+}
+
+.badge-soft-teal {
+  color: $teal;
+  background-color: rgba($teal, .2);
+}
+
+
+.badge-soft-dark {
+  color: $dark;
+  background-color: rgba($dark, .2);
+}
+
+.enqi-badge {
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 16px;
+
+  &.hot {
+    background-color: $danger;
+  }
+
+  &.medium {
+    background-color: $gray-600;
+  }
+
+}

@@ -1,0 +1,78 @@
+// 
+// progress.scss
+// 
+
+.progress {
+  background-color: $gray-200;
+}
+
+/* Progressbar Vertical */
+
+.progress-vertical {
+  min-height: 250px;
+  height: 250px;
+  width: 12px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  box-shadow: none;
+}
+
+.progress-vertical .progress-bar {
+  width: 100%;
+}
+
+.progress-vertical-bottom {
+  min-height: 250px;
+  height: 250px;
+  position: relative;
+  width: 12px;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  box-shadow: none;
+}
+
+.progress-vertical-bottom .progress-bar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.progress-vertical.progress-sm,
+.progress-vertical-bottom.progress-sm {
+  width: 4px !important;
+}
+
+.progress-vertical.progress-sm .progress-bar,
+.progress-vertical-bottom.progress-sm .progress-bar {
+  font-size: $fs-8;
+  line-height: 5px;
+}
+
+.progress-vertical.progress-md,
+.progress-vertical-bottom.progress-md {
+  width: 14px !important;
+}
+
+.progress-vertical.progress-md .progress-bar,
+.progress-vertical-bottom.progress-md .progress-bar {
+  font-size: $fs-10;
+  line-height: 14.4px;
+}
+
+.progress-vertical.progress-lg,
+.progress-vertical-bottom.progress-lg {
+  width: 20px !important;
+}
+
+.progress-vertical.progress-lg .progress-bar,
+.progress-vertical-bottom.progress-lg .progress-bar {
+  font-size: $fs-12;
+  line-height: 20px;
+}
+
+.progress-icon-spin {
+  font-size: $fs-36;
+}

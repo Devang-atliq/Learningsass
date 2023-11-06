@@ -1,0 +1,127 @@
+.no-caret {
+    &::after {
+        display: none;
+    }
+}
+
+// 
+// _dropdown.scss
+// 
+.dropdown-menu {
+    box-shadow: 0 3px 12px rgba($gray-400, .3);
+    border: 1px solid $gray-200;
+    margin: 0;
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: $gray-100;
+        color: $gray-900;
+    }
+}
+
+.dropdown-lg {
+    width: 320px;
+}
+
+.dropdown-xl {
+    min-width: 42rem;
+}
+
+.dropstart .dropdown-toggle::before,
+.dropend .dropdown-toggle::after,
+.dropup .dropdown-toggle::after,
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-divider {
+    border-top: 1px solid $gray-200;
+}
+
+.show-on-hover {
+    &:hover>.dropdown-menu {
+        display: block;
+    }
+
+    >.dropdown-toggle:active {
+        pointer-events: none;
+    }
+}
+
+.sub-dropdown-menu {
+    position: relative;
+
+    .dropdown-item {
+        i {
+            font-size: $fs-18;
+            margin-right: 10px;
+            width: 18px;
+        }
+    }
+
+    .dropdown-menu {
+
+        &:before,
+        &:after {
+            display: none !important;
+        }
+
+        top:0;
+
+        &.open-left-side {
+            right: 100% !important;
+            left: auto !important;
+            position: absolute;
+        }
+
+        &.open-right-side {
+            left: 100% !important;
+        }
+    }
+}
+
+@include screen-xs {
+    .dropdown-lg {
+        width: 280px;
+    }
+
+    .header-navbar {
+        .dropdown-lg {
+            &.dropdown-menu-end[data-bs-popper] {
+                right: -50px;
+                left: auto;
+            }
+        }
+
+        .navbar-wrapper {
+            .nav.navbar-nav {
+                .nav-item {
+                    .dropdown-menu:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include screen-small {
+    .dropdown-lg {
+        width: 230px;
+    }
+}
+
+.dropdown-menu {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .dropdown-item {
+        color: $gray-700;
+        padding: 0.5rem 1rem;
+
+        >i {
+            font-size: $fs-16;
+            margin-right: 12px;
+        }
+    }
+}

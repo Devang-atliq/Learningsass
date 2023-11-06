@@ -1,0 +1,2543 @@
+//
+// Buttons
+// 
+
+.btn {
+  border-radius: $default-border-radius;
+  /*box-shadow: 0 7px 14px 0 rgba($gray-400,.5);*/
+  transition: .3s ease-out;
+
+  &:hover {
+    box-shadow: 0 1px 2px 0 rgba($gray-400, .5);
+  }
+
+  &:focus {
+    // box-shadow: 0 0 0 0.2rem $gray-200;
+    box-shadow: none;
+  }
+
+  &-xl {
+    padding: 17px 30px;
+    font-size: $fs-28;
+  }
+
+  &-lg {
+    padding: 11px 24px;
+    font-size: $fs-24;
+  }
+
+  &-md {
+    padding: 8px 18px;
+    font-size: $fs-20;
+  }
+
+  &-sm {
+    padding: 4.5px 16px;
+    font-size: $fs-18;
+  }
+
+  &-xs {
+    padding: 3px 14px;
+    font-size: $fs-16;
+  }
+
+  &-xxs {
+    padding: 0.5px 10px;
+    font-size: $fs-14;
+  }
+
+  &[class*=btn-soft-] {
+    border: none;
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-dashed-#{$color} {
+    background-color: transparent !important;
+    color: $value !important;
+    border: 1px dashed $gray-300;
+
+    &:hover {
+      background-color: $value !important;
+      color: $white !important;
+      border: 1px solid $value;
+    }
+  }
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+
+.animation-modal,
+.button-list,
+.button-items {
+
+  .btn {
+    margin: 0 5px 8px 0
+  }
+}
+
+.animation-modal,
+.button-list,
+.button-items {
+
+  .btn-group {
+
+    .btn {
+      margin-bottom: 10px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.btn-round {
+  border-radius: 30px !important;
+}
+
+.btn-square {
+  border-radius: 0;
+}
+
+.btn-icon {
+  &-xxs {
+    height: 24px !important;
+    width: 24px !important;
+    min-width: 24px !important;
+    font-size: $fs-12;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 0;
+    border-radius: $default-border-radius;
+  }
+
+  &-xs {
+    height: 32px !important;
+    width: 32px !important;
+    min-width: 32px !important;
+    font-size: $fs-16;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0;
+    border-radius: $default-border-radius;
+  }
+
+  &-sm {
+    height: 38px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    font-size: $fs-18;
+    font-weight: 700;
+    line-height: 38px;
+    padding: 0;
+    border-radius: $default-border-radius;
+  }
+
+  &-md {
+    height: 48px !important;
+    width: 48px !important;
+    min-width: 48px !important;
+    font-size: $fs-20;
+    font-weight: 700;
+    line-height: inherit;
+    padding: 0;
+    border-radius: $default-border-radius;
+  }
+
+  &-lg {
+    height: 60px !important;
+    width: 60px !important;
+    min-width: 60px !important;
+    font-size: $fs-24;
+    font-weight: 700;
+    line-height: 60px;
+    padding: 0;
+    border-radius: $default-border-radius;
+  }
+
+  &-xl {
+    height: 78px !important;
+    width: 78px !important;
+    min-width: 78px !important;
+    font-size: $fs-28;
+    font-weight: 700;
+    line-height: 78px;
+    padding: 0;
+    border-radius: $default-border-radius;
+  }
+
+  &-round {
+    border-radius: 30px;
+  }
+
+  &-square {
+    border-radius: 0;
+  }
+}
+
+.btn-skew {
+  transform: skew(-15deg);
+
+  span {
+    display: inline-block;
+    transform: skew(15deg);
+  }
+}
+
+.accordion {
+  .btn:focus {
+    box-shadow: none;
+  }
+}
+
+.btn.btn-outline-dashed {
+  outline: 1px dashed $white !important;
+  outline-offset: -5px;
+  -moz-outline-radius: 25px;
+}
+
+
+.btn-primary,
+.btn-success,
+.btn-secondary,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-dark,
+.btn-pink,
+.btn-purple,
+.btn-blue,
+.btn-orange {
+  color: $white;
+}
+
+/*btn-primary*/
+
+.btn-primary {
+  background-color: $primary;
+  border: 1px solid $primary;
+  box-shadow: 0 7px 14px 0 rgba($primary, .5);
+}
+
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open>.dropdown-toggle.btn-primary,
+.btn-outline-primary.active,
+.btn-outline-primary:active,
+.show>.btn-outline-primary.dropdown-toggle,
+.btn-outline-primary:hover,
+.btn-primary.active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:active,
+.show>.btn-primary.dropdown-toggle,
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle,
+a.bg-primary:focus,
+a.bg-primary:hover,
+button.bg-primary:focus,
+button.bg-primary:hover {
+  background-color: darken($primary, 5%) !important;
+  border: 1px solid darken($primary, 5%);
+  color: $white;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-outline-primary.focus,
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 2px rgba($primary, .3) !important;
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  color: lighten($primary, 5%);
+}
+
+/*btn-success*/
+
+.btn-success {
+  background-color: $success;
+  border: 1px solid $success;
+  box-shadow: 0 7px 14px 0 rgba($success, .5);
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.focus,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:hover,
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success.disabled,
+.btn-success:disabled,
+.open>.dropdown-toggle.btn-success,
+.btn-outline-success.active,
+.btn-outline-success:active,
+.show>.btn-outline-success.dropdown-toggle,
+.btn-outline-success:hover,
+.btn-success.active,
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.show>.btn-outline-success.dropdown-toggle,
+.btn-success:active,
+.show>.btn-success.dropdown-toggle,
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active,
+.show>.btn-success.dropdown-toggle {
+  background-color: darken($success, 5%);
+  border: 1px solid darken($success, 5%);
+  color: $white;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus,
+.show>.btn-success.dropdown-toggle:focus,
+.btn-success.focus,
+.btn-success:focus,
+.btn-outline-success.focus,
+.btn-outline-success:focus {
+  box-shadow: 0 0 0 2px rgba($success, .3) !important;
+}
+
+
+/*btn-info*/
+
+.btn-info {
+  background-color: $info;
+  border: 1px solid $info;
+  box-shadow: 0 7px 14px 0 rgba($info, .5);
+}
+
+.btn-info:not(:disabled):not(.disabled):active,
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info.focus,
+.btn-info:active,
+.btn-info:focus,
+.btn-info:hover,
+.open>.dropdown-toggle.btn-info,
+.btn-outline-info.active,
+.btn-outline-info:active,
+.btn-info.disabled,
+.btn-info:disabled,
+.btn-outline-info:not(:disabled):not(.disabled).active,
+.btn-outline-info:not(:disabled):not(.disabled):active,
+.show>.btn-outline-info.dropdown-toggle,
+.show>.btn-outline-info.dropdown-toggle,
+.btn-outline-info:hover,
+.btn-info.active,
+.btn-info:active,
+.show>.btn-info.dropdown-toggle,
+.btn-info:not(:disabled):not(.disabled).active,
+.btn-info:not(:disabled):not(.disabled):active,
+.show>.btn-info.dropdown-toggle {
+  background-color: darken($info, 5%);
+  border: 1px solid darken($info, 5%);
+  color: $white;
+}
+
+.btn-info:not(:disabled):not(.disabled):active:focus,
+.show>.btn-info.dropdown-toggle:focus,
+.btn-info.focus,
+.btn-info:focus,
+.btn-outline-info.focus,
+.btn-outline-info:focus {
+  box-shadow: 0 0 0 2px rgba($info, .3) !important;
+}
+
+.btn-outline-info.disabled,
+.btn-outline-info:disabled {
+  color: lighten($info, 3%);
+}
+
+/*btn-warning*/
+
+.btn-warning {
+  background-color: $warning;
+  border: 1px solid $warning;
+  box-shadow: 0 7px 14px 0 rgba($warning, .5);
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning:focus,
+.btn-warning:hover,
+.open>.dropdown-toggle.btn-warning,
+.btn-outline-warning.active,
+.btn-outline-warning:active,
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.show>.btn-outline-warning.dropdown-toggle,
+.show>.btn-outline-warning.dropdown-toggle,
+.btn-outline-warning:hover,
+.btn-warning.active,
+.btn-warning.disabled,
+.btn-warning:disabled,
+.btn-warning:active,
+.show>.btn-warning.dropdown-toggle {
+  background-color: darken($warning, 5%);
+  border: 1px solid darken($warning, 5%);
+  color: $white;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active:focus,
+.show>.btn-warning.dropdown-toggle:focus,
+.btn-warning.focus,
+.btn-warning:focus,
+.btn-outline-warning.focus,
+.btn-outline-warning:focus {
+  box-shadow: 0 0 0 2px rgba($warning, .3) !important;
+}
+
+/*btn-danger*/
+
+.btn-danger {
+  background-color: $danger;
+  border: 1px solid $danger;
+  box-shadow: 0 7px 14px 0 rgba($danger, .5);
+}
+
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:active,
+.btn-danger:focus,
+.btn-danger:hover,
+.btn-danger.active,
+.btn-danger.focus,
+.btn-danger:active,
+.btn-danger:focus,
+.btn-danger:hover,
+.open>.dropdown-toggle.btn-danger,
+.btn-outline-danger.active,
+.btn-outline-danger:active,
+.show>.btn-outline-danger.dropdown-toggle,
+.btn-outline-danger:hover,
+.btn-danger.active,
+.btn-danger.disabled,
+.btn-danger:disabled,
+.btn-outline-danger:not(:disabled):not(.disabled).active,
+.btn-outline-danger:not(:disabled):not(.disabled):active,
+.show>.btn-outline-danger.dropdown-toggle,
+.btn-danger:active,
+.show>.btn-danger.dropdown-toggle {
+  background-color: darken($danger, 5%);
+  border: 1px solid darken($danger, 5%);
+  color: $white;
+}
+
+.show>.btn-danger.dropdown-toggle:focus,
+.btn-danger.focus,
+.btn-danger:focus,
+.btn-outline-danger.focus,
+.btn-outline-danger:focus {
+  box-shadow: 0 0 0 2px rgba($danger, .3) !important;
+}
+
+
+/*btn-secondary*/
+
+.btn-secondary {
+  background-color: $secondary;
+  border: 1px solid $secondary;
+  box-shadow: 0 7px 14px 0 rgba($secondary, .5);
+  color: $gray-100;
+}
+
+.btn-secondary.active,
+.btn-secondary.focus,
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover,
+.open>.dropdown-toggle.btn-secondary,
+.btn-outline-secondary.active,
+.btn-outline-secondary:active,
+.show>.btn-outline-secondary.dropdown-toggle,
+.btn-outline-secondary:hover,
+.btn-secondary.active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle,
+.show>.btn-outline-secondary.dropdown-toggle,
+.btn-secondary:active,
+.show>.btn-secondary.dropdown-toggle,
+.btn-secondary.disabled,
+.btn-secondary:disabled,
+a.bg-secondary:focus,
+a.bg-secondary:hover,
+button.bg-secondary:focus,
+button.bg-secondary:hover {
+  background-color: darken($secondary, 5%) !important;
+  border: 1px solid darken($secondary, 5%);
+  color: $gray-100;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-secondary.dropdown-toggle:focus,
+.btn-secondary.focus,
+.btn-secondary:focus,
+.btn-outline-secondary.focus,
+.btn-outline-secondary:focus {
+  box-shadow: 0 0 0 1px rgba($secondary, .3) !important;
+}
+
+/*btn-light*/
+.btn-light {
+  color: $gray-700;
+  background-color: $light;
+  border: 1px solid $gray-200;
+  box-shadow: 0 7px 14px 0 rgba($gray-400, .5);
+}
+
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show>.btn-light.dropdown-toggle,
+.btn-light:active,
+.btn-light:focus,
+.btn-light:hover,
+.btn-light.active,
+.btn-light.focus,
+.btn-light:active,
+.btn-light:focus,
+.btn-light:hover,
+.open>.dropdown-toggle.btn-light,
+.btn-outline-light.active,
+.btn-outline-light:active,
+.show>.btn-outline-light.dropdown-toggle,
+.btn-outline-light:hover,
+.btn-light.active,
+.btn-light.disabled,
+.btn-light:disabled,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.show>.btn-outline-light.dropdown-toggle,
+.btn-light:active,
+.show>.btn-light.dropdown-toggle {
+  background-color: darken($light, 5%);
+  border: 1px solid darken($light, 5%);
+}
+
+.show>.btn-light.dropdown-toggle:focus,
+.btn-light.focus,
+.btn-light:focus,
+.btn-outline-light.focus,
+.btn-outline-light:focus {
+  box-shadow: 0 0 0 2px rgba($gray-200, .3) !important;
+}
+
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled):active,
+.show>.btn-light.dropdown-toggle {
+  color: $gray-700;
+}
+
+/*btn-dark*/
+
+.btn-dark {
+  background-color: $dark;
+  border: 1px solid $dark;
+  box-shadow: 0 7px 14px 0 rgba($dark, .5);
+  color: $white;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark.active,
+.btn-dark.focus,
+.btn-dark:active,
+.btn-dark:focus,
+.btn-dark:hover,
+.open>.dropdown-toggle.btn-dark,
+.btn-outline-dark.active,
+.btn-outline-dark:active,
+.btn-dark.disabled,
+.btn-dark:disabled,
+.btn-outline-dark:not(:disabled):not(.disabled).active,
+.btn-outline-dark:not(:disabled):not(.disabled):active,
+.show>.btn-outline-dark.dropdown-toggle,
+.show>.btn-outline-dark.dropdown-toggle,
+.btn-outline-dark:hover {
+  background-color: darken($dark, 5%);
+  border: 1px solid darken($dark, 5%);
+  color: $white;
+}
+
+.show>.btn-dark.dropdown-toggle:focus,
+.btn-dark.focus,
+.btn-dark:focus,
+.btn-outline-dark.focus,
+.btn-outline-dark:focus {
+  box-shadow: 0 0 0 2px rgba($dark, .3) !important;
+}
+
+/*btn-link*/
+
+.btn-link {
+  color: $gray-600;
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  text-decoration: none;
+  color: $gray-700;
+}
+
+
+/*btn-pink*/
+
+.btn-pink {
+  background-color: $pink;
+  border: 1px solid $pink;
+  color: $white;
+  box-shadow: 0 7px 14px 0 rgba($pink, .5);
+}
+
+.btn-pink:hover,
+.btn-pink:focus,
+.btn-pink:active,
+.btn-pink.active,
+.btn-pink.focus,
+.btn-pink:active,
+.btn-pink:focus,
+.btn-pink:hover,
+.open>.dropdown-toggle.btn-pink,
+.btn-outline-pink.active,
+.btn-outline-pink:active,
+.btn-pink.disabled,
+.btn-pink:disabled,
+.btn-outline-pink:not(:disabled):not(.disabled).active,
+.btn-outline-pink:not(:disabled):not(.disabled):active,
+.show>.btn-outline-pink.dropdown-toggle,
+.show>.btn-outline-pink.dropdown-toggle,
+.btn-outline-pink:hover {
+  background-color: darken($pink, 5%);
+  border: 1px solid darken($pink, 5%);
+  color: $white;
+}
+
+.show>.btn-pink.dropdown-toggle:focus,
+.btn-pink.focus,
+.btn-pink:focus,
+.btn-outline-pink.focus,
+.btn-outline-pink:focus {
+  box-shadow: 0 0 0 2px rgba($pink, .3) !important;
+}
+
+/*btn-purple*/
+
+.btn-purple {
+  background-color: $purple;
+  border: 1px solid $purple;
+  color: $white;
+  box-shadow: 0 7px 14px 0 rgba($purple, .5);
+}
+
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active,
+.btn-purple.active,
+.btn-purple.focus,
+.btn-purple:active,
+.btn-purple:focus,
+.btn-purple:hover,
+.open>.dropdown-toggle.btn-purple,
+.btn-outline-purple.active,
+.btn-outline-purple:active,
+.btn-purple.disabled,
+.btn-purple:disabled,
+.btn-outline-purple:not(:disabled):not(.disabled).active,
+.btn-outline-purple:not(:disabled):not(.disabled):active,
+.show>.btn-outline-purple.dropdown-toggle,
+.show>.btn-outline-purple.dropdown-toggle,
+.btn-outline-purple:hover {
+  background-color: darken($purple, 5%);
+  border: 1px solid darken($purple, 5%);
+  color: $white;
+}
+
+.show>.btn-purple.dropdown-toggle:focus,
+.btn-purple.focus,
+.btn-purple:focus,
+.btn-outline-purple.focus,
+.btn-outline-purple:focus {
+  box-shadow: 0 0 0 2px rgba($purple, .3);
+}
+
+/*btn-blue*/
+
+.btn-blue {
+  background-color: $blue;
+  border: 1px solid $blue;
+  box-shadow: 0 7px 14px 0 rgba($blue, .5);
+}
+
+.btn-blue.active,
+.btn-blue.focus,
+.btn-blue:active,
+.btn-blue:focus,
+.btn-blue:hover,
+.open>.dropdown-toggle.btn-blue,
+.btn-outline-blue.active,
+.btn-outline-blue:active,
+.show>.btn-outline-blue.dropdown-toggle,
+.btn-outline-blue:hover,
+.btn-blue.active,
+.btn-blue:not(:disabled):not(.disabled):active,
+.btn-blue:active,
+.show>.btn-blue.dropdown-toggle,
+.btn-blue.disabled,
+.btn-blue:disabled,
+.btn-outline-blue:not(:disabled):not(.disabled).active,
+.btn-outline-blue:not(:disabled):not(.disabled):active,
+.show>.btn-outline-blue.dropdown-toggle,
+a.bg-blue:focus,
+a.bg-blue:hover,
+button.bg-blue:focus,
+button.bg-blue:hover {
+  background-color: darken($blue, 5%) !important;
+  border: 1px solid darken($blue, 5%);
+  color: $white;
+}
+
+.btn-blue:not(:disabled):not(.disabled):active:focus,
+.show>.btn-blue.dropdown-toggle:focus,
+.btn-blue.focus,
+.btn-blue:focus,
+.btn-outline-blue.focus,
+.btn-outline-blue:focus {
+  box-shadow: 0 0 0 2px rgba($blue, .3) !important;
+}
+
+/*btn-orange*/
+
+.btn-orange {
+  background-color: $orange;
+  border: 1px solid $orange;
+  box-shadow: 0 7px 14px 0 rgba($orange, .5);
+}
+
+.btn-orange.active,
+.btn-orange.focus,
+.btn-orange:active,
+.btn-orange:focus,
+.btn-orange:hover,
+.open>.dropdown-toggle.btn-orange,
+.btn-outline-orange.active,
+.btn-outline-orange:active,
+.show>.btn-outline-orange.dropdown-toggle,
+.btn-outline-orange:hover,
+.btn-orange.active,
+.btn-orange:not(:disabled):not(.disabled):active,
+.btn-orange:active,
+.show>.btn-orange.dropdown-toggle,
+.btn-orange.disabled,
+.btn-orange:disabled,
+.btn-outline-orange:not(:disabled):not(.disabled).active,
+.btn-outline-orange:not(:disabled):not(.disabled):active,
+.show>.btn-outline-orange.dropdown-toggle,
+a.bg-orange:focus,
+a.bg-orange:hover,
+button.bg-orange:focus,
+button.bg-orange:hover {
+  background-color: darken($orange, 5%) !important;
+  border: 1px solid darken($orange, 5%);
+  color: $white;
+}
+
+.btn-orange:not(:disabled):not(.disabled):active:focus,
+.show>.btn-orange.dropdown-toggle:focus,
+.btn-orange.focus,
+.btn-orange:focus,
+.btn-outline-orange.focus,
+.btn-outline-orange:focus {
+  box-shadow: 0 0 0 2px rgba($orange, .3) !important;
+}
+
+
+/*btn-white*/
+
+.btn-white {
+  background-color: $white;
+  color: $gray-700;
+  border: 1px solid $white;
+  box-shadow: 0px 7px 14px 0.25px $gray-300;
+}
+
+.btn-white.active,
+.btn-white.focus,
+.btn-white:active,
+.btn-white:focus,
+.btn-white:hover,
+.open>.dropdown-toggle.btn-white,
+.btn-outline-white.active,
+.btn-outline-white:active,
+.show>.btn-outline-white.dropdown-toggle,
+.btn-outline-white:hover,
+.btn-white.active,
+.btn-white:not(:disabled):not(.disabled):active,
+.btn-white:active,
+.show>.btn-white.dropdown-toggle,
+.btn-white.disabled,
+.btn-white:disabled,
+.btn-outline-white:not(:disabled):not(.disabled).active,
+.btn-outline-white:not(:disabled):not(.disabled):active,
+.show>.btn-outline-white.dropdown-toggle,
+.btn-white:not(:disabled):not(.disabled).active,
+.btn-white:not(:disabled):not(.disabled):active,
+.show>.btn-white.dropdown-toggle,
+a.bg-white:focus,
+a.bg-white:hover,
+button.bg-white:focus,
+button.bg-white:hover {
+  background-color: darken($white, 8%) !important;
+  border: 1px solid darken($white, 8%);
+}
+
+.btn-white:not(:disabled):not(.disabled):active:focus,
+.show>.btn-white.dropdown-toggle:focus,
+.btn-white.focus,
+.btn-white:focus,
+.btn-outline-white.focus,
+.btn-outline-white:focus {
+  box-shadow: 0px 1px 4px 0.25px $gray-300 !important;
+}
+
+
+/* button Outline */
+
+.btn-outline-primary {
+  color: $primary;
+  border-color: $primary;
+}
+
+.btn-outline-success {
+  color: $success;
+  border-color: $success;
+}
+
+.btn-outline-info {
+  color: $info;
+  border-color: $info;
+}
+
+.btn-outline-warning {
+  color: $warning;
+  border-color: $warning;
+}
+
+.btn-outline-danger {
+  color: $danger;
+  border-color: $danger;
+}
+
+.btn-outline-dark {
+  color: $dark;
+  background-image: none;
+  background-color: transparent;
+  border-color: $dark;
+}
+
+.btn-outline-light {
+  color: $gray-600;
+  background-image: none;
+  background-color: transparent;
+  border-color: $gray-300;
+}
+
+.btn-outline-secondary {
+  color: $text-light;
+  background-image: none;
+  background-color: transparent;
+  border-color: $outline;
+}
+
+.btn-outline-pink {
+  color: $pink;
+  background-image: none;
+  background-color: transparent;
+  border-color: $pink;
+}
+
+.btn-outline-purple {
+  color: $purple;
+  background-image: none;
+  background-color: transparent;
+  border-color: $purple;
+}
+
+.btn-outline-blue {
+  color: $blue;
+  background-image: none;
+  background-color: transparent;
+  border-color: $blue;
+}
+
+/*soft buttons*/
+
+/*soft buttons*/
+
+.btn-soft-primary {
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($primary, 0.2);
+    background-color: rgba($primary, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-secondary {
+  background-color: rgba($secondary, 0.15);
+  color: $secondary;
+
+  &:hover {
+    background-color: $secondary;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($secondary, 0.2);
+    background-color: rgba($secondary, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-success {
+  background-color: rgba($success, 0.1);
+  color: $success;
+
+  &:hover {
+    background-color: $success;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($success, 0.2);
+    background-color: rgba($success, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-warning {
+  background-color: rgba($warning, 0.18);
+  color: $warning;
+
+  &:hover {
+    background-color: $warning;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($warning, 0.2);
+    background-color: rgba($warning, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-danger {
+  background-color: rgba($danger, 0.1);
+  color: $danger;
+
+  &:hover {
+    background-color: $danger;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($danger, 0.2);
+    background-color: rgba($danger, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-info {
+  background-color: rgba($info, 0.1);
+  color: $info;
+
+  &:hover {
+    background-color: $info;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($info, 0.2);
+    background-color: rgba($info, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-dark {
+  background-color: rgba($dark, 0.1);
+  color: $dark;
+
+  &:hover {
+    background-color: $dark;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($dark, 0.2);
+    background-color: rgba($dark, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-pink {
+  background-color: rgba($pink, 0.1);
+  color: $pink;
+
+  &:hover {
+    background-color: $pink;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($pink, 0.2);
+    background-color: rgba($pink, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-purple {
+  background-color: rgba($purple, 0.1);
+  color: $purple;
+
+  &:hover {
+    background-color: $purple;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($purple, 0.2);
+    background-color: rgba($purple, 0.8);
+    color: $white;
+  }
+}
+
+.btn-soft-blue {
+  background-color: rgba($blue, 0.1);
+  color: $blue;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.1rem rgba($blue, 0.2);
+    background-color: rgba($blue, 0.8);
+    color: $white;
+  }
+}
+
+/* Social Buttons */
+
+.btn-social-icon .btn {
+  width: 36px;
+  height: 36px;
+  padding-left: 10px;
+}
+.btn- {
+  &facebook {
+    color: #0F182D;
+    background-color: $placeholder;
+
+    &:hover {
+      background-color: rgba($placeholder, 0.1);
+      color: $placeholder;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.1rem rgba($placeholder, 0.2);
+      background-color: rgba($placeholder, 0.8);
+      color: $white;
+    }
+  }
+}
+
+// .btn- {
+//   &facebook {
+//     color: $white;
+//     background-color: $facebook;
+
+//     &:hover {
+//       background-color: rgba($facebook, 0.1);
+//       color: $facebook;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($facebook, 0.2);
+//       background-color: rgba($facebook, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-facebook {
+//     color: $facebook;
+//     background-color: rgba($facebook, 0.1);
+
+//     &:hover {
+//       background-color: $facebook;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($facebook, 0.2);
+//       background-color: rgba($facebook, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-facebook {
+//     color: $facebook;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $facebook;
+
+//     &:hover {
+//       background-color: $facebook;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($facebook, 0.2);
+//       background-color: rgba($facebook, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &google {
+//     color: $white;
+//     background-color: $google;
+
+//     &:hover {
+//       background-color: rgba($google, 0.1);
+//       color: $google;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($google, 0.2);
+//       background-color: rgba($google, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-google {
+//     color: $google;
+//     background-color: rgba($google, 0.1);
+
+//     &:hover {
+//       background-color: $google;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($google, 0.2);
+//       background-color: rgba($google, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-google {
+//     color: $google;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $google;
+
+//     &:hover {
+//       background-color: $google;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($google, 0.2);
+//       background-color: rgba($google, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &twitter {
+//     color: $white;
+//     background-color: $twitter;
+
+//     &:hover {
+//       background-color: rgba($twitter, 0.1);
+//       color: $twitter;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($twitter, 0.2);
+//       background-color: rgba($twitter, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-twitter {
+//     color: $twitter;
+//     background-color: rgba($twitter, 0.1);
+
+//     &:hover {
+//       background-color: $twitter;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($twitter, 0.2);
+//       background-color: rgba($twitter, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-twitter {
+//     color: $twitter;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $twitter;
+
+//     &:hover {
+//       background-color: $twitter;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($twitter, 0.2);
+//       background-color: rgba($twitter, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &linkedin {
+//     color: $white;
+//     background-color: $linkedin;
+
+//     &:hover {
+//       background-color: rgba($linkedin, 0.1);
+//       color: $linkedin;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($linkedin, 0.2);
+//       background-color: rgba($linkedin, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-linkedin {
+//     color: $linkedin;
+//     background-color: rgba($linkedin, 0.1);
+
+//     &:hover {
+//       background-color: $linkedin;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($linkedin, 0.2);
+//       background-color: rgba($linkedin, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-linkedin {
+//     color: $linkedin;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $linkedin;
+
+//     &:hover {
+//       background-color: $linkedin;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($linkedin, 0.2);
+//       background-color: rgba($linkedin, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &pinterest {
+//     color: $white;
+//     background-color: $pinterest;
+
+//     &:hover {
+//       background-color: rgba($pinterest, 0.1);
+//       color: $pinterest;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($pinterest, 0.2);
+//       background-color: rgba($pinterest, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-pinterest {
+//     color: $pinterest;
+//     background-color: rgba($pinterest, 0.1);
+
+//     &:hover {
+//       background-color: $pinterest;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($pinterest, 0.2);
+//       background-color: rgba($pinterest, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-pinterest {
+//     color: $pinterest;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $pinterest;
+
+//     &:hover {
+//       background-color: $pinterest;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($pinterest, 0.2);
+//       background-color: rgba($pinterest, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &git {
+//     color: $white;
+//     background-color: $git;
+
+//     &:hover {
+//       background-color: rgba($git, 0.1);
+//       color: $git;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($git, 0.2);
+//       background-color: rgba($git, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-git {
+//     color: $git;
+//     background-color: rgba($git, 0.1);
+
+//     &:hover {
+//       background-color: $git;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($git, 0.2);
+//       background-color: rgba($git, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-git {
+//     color: $git;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $git;
+
+//     &:hover {
+//       background-color: $git;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($git, 0.2);
+//       background-color: rgba($git, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &tumblr {
+//     color: $white;
+//     background-color: $tumblr;
+
+//     &:hover {
+//       background-color: rgba($tumblr, 0.1);
+//       color: $tumblr;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($tumblr, 0.2);
+//       background-color: rgba($tumblr, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-tumblr {
+//     color: $tumblr;
+//     background-color: rgba($tumblr, 0.1);
+
+//     &:hover {
+//       background-color: $tumblr;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($tumblr, 0.2);
+//       background-color: rgba($tumblr, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-tumblr {
+//     color: $tumblr;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $tumblr;
+
+//     &:hover {
+//       background-color: $tumblr;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($tumblr, 0.2);
+//       background-color: rgba($tumblr, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &vimeo {
+//     color: $white;
+//     background-color: $vimeo;
+
+//     &:hover {
+//       background-color: rgba($vimeo, 0.1);
+//       color: $vimeo;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($vimeo, 0.2);
+//       background-color: rgba($vimeo, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-vimeo {
+//     color: $vimeo;
+//     background-color: rgba($vimeo, 0.1);
+
+//     &:hover {
+//       background-color: $vimeo;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($vimeo, 0.2);
+//       background-color: rgba($vimeo, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-vimeo {
+//     color: $vimeo;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $vimeo;
+
+//     &:hover {
+//       background-color: $vimeo;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($vimeo, 0.2);
+//       background-color: rgba($vimeo, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &youtube {
+//     color: $white;
+//     background-color: $youtube;
+
+//     &:hover {
+//       background-color: rgba($youtube, 0.1);
+//       color: $youtube;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($youtube, 0.2);
+//       background-color: rgba($youtube, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-youtube {
+//     color: $youtube;
+//     background-color: rgba($youtube, 0.1);
+
+//     &:hover {
+//       background-color: $youtube;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($youtube, 0.2);
+//       background-color: rgba($youtube, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-youtube {
+//     color: $youtube;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $youtube;
+
+//     &:hover {
+//       background-color: $youtube;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($youtube, 0.2);
+//       background-color: rgba($youtube, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &flickr {
+//     color: $white;
+//     background-color: $flickr;
+
+//     &:hover {
+//       background-color: rgba($flickr, 0.1);
+//       color: $flickr;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($flickr, 0.2);
+//       background-color: rgba($flickr, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-flickr {
+//     color: $flickr;
+//     background-color: rgba($flickr, 0.1);
+
+//     &:hover {
+//       background-color: $flickr;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($flickr, 0.2);
+//       background-color: rgba($flickr, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-flickr {
+//     color: $flickr;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $flickr;
+
+//     &:hover {
+//       background-color: $flickr;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($flickr, 0.2);
+//       background-color: rgba($flickr, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &reddit {
+//     color: $white;
+//     background-color: $reddit;
+
+//     &:hover {
+//       background-color: rgba($reddit, 0.1);
+//       color: $reddit;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($reddit, 0.2);
+//       background-color: rgba($reddit, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-reddit {
+//     color: $reddit;
+//     background-color: rgba($reddit, 0.1);
+
+//     &:hover {
+//       background-color: $reddit;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($reddit, 0.2);
+//       background-color: rgba($reddit, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-reddit {
+//     color: $reddit;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $reddit;
+
+//     &:hover {
+//       background-color: $reddit;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($reddit, 0.2);
+//       background-color: rgba($reddit, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &dribbble {
+//     color: $white;
+//     background-color: $dribbble;
+
+//     &:hover {
+//       background-color: rgba($dribbble, 0.1);
+//       color: $dribbble;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($dribbble, 0.2);
+//       background-color: rgba($dribbble, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-dribbble {
+//     color: $dribbble;
+//     background-color: rgba($dribbble, 0.1);
+
+//     &:hover {
+//       background-color: $dribbble;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($dribbble, 0.2);
+//       background-color: rgba($dribbble, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-dribbble {
+//     color: $dribbble;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $dribbble;
+
+//     &:hover {
+//       background-color: $dribbble;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($dribbble, 0.2);
+//       background-color: rgba($dribbble, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &skype {
+//     color: $white;
+//     background-color: $skype;
+
+//     &:hover {
+//       background-color: rgba($skype, 0.1);
+//       color: $skype;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($skype, 0.2);
+//       background-color: rgba($skype, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-skype {
+//     color: $skype;
+//     background-color: rgba($skype, 0.1);
+
+//     &:hover {
+//       background-color: $skype;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($skype, 0.2);
+//       background-color: rgba($skype, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-skype {
+//     color: $skype;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $skype;
+
+//     &:hover {
+//       background-color: $skype;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($skype, 0.2);
+//       background-color: rgba($skype, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &instagram {
+//     color: $white;
+//     background-color: $instagram;
+
+//     &:hover {
+//       background-color: rgba($instagram, 0.1);
+//       color: $instagram;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($instagram, 0.2);
+//       background-color: rgba($instagram, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-instagram {
+//     color: $instagram;
+//     background-color: rgba($instagram, 0.1);
+
+//     &:hover {
+//       background-color: $instagram;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($instagram, 0.2);
+//       background-color: rgba($instagram, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-instagram {
+//     color: $instagram;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $instagram;
+
+//     &:hover {
+//       background-color: $instagram;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($instagram, 0.2);
+//       background-color: rgba($instagram, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &lastfm {
+//     color: $white;
+//     background-color: $lastfm;
+
+//     &:hover {
+//       background-color: rgba($lastfm, 0.1);
+//       color: $lastfm;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($lastfm, 0.2);
+//       background-color: rgba($lastfm, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-lastfm {
+//     color: $lastfm;
+//     background-color: rgba($lastfm, 0.1);
+
+//     &:hover {
+//       background-color: $lastfm;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($lastfm, 0.2);
+//       background-color: rgba($lastfm, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-lastfm {
+//     color: $lastfm;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $lastfm;
+
+//     &:hover {
+//       background-color: $lastfm;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($lastfm, 0.2);
+//       background-color: rgba($lastfm, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &behance {
+//     color: $white;
+//     background-color: $behance;
+
+//     &:hover {
+//       background-color: rgba($behance, 0.1);
+//       color: $behance;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($behance, 0.2);
+//       background-color: rgba($behance, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-behance {
+//     color: $behance;
+//     background-color: rgba($behance, 0.1);
+
+//     &:hover {
+//       background-color: $behance;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($behance, 0.2);
+//       background-color: rgba($behance, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-behance {
+//     color: $behance;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $behance;
+
+//     &:hover {
+//       background-color: $behance;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($behance, 0.2);
+//       background-color: rgba($behance, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &rss {
+//     color: $white;
+//     background-color: $rss;
+
+//     &:hover {
+//       background-color: rgba($rss, 0.1);
+//       color: $rss;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($rss, 0.2);
+//       background-color: rgba($rss, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-rss {
+//     color: $rss;
+//     background-color: rgba($rss, 0.1);
+
+//     &:hover {
+//       background-color: $rss;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($rss, 0.2);
+//       background-color: rgba($rss, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-rss {
+//     color: $rss;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $rss;
+
+//     &:hover {
+//       background-color: $rss;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($rss, 0.2);
+//       background-color: rgba($rss, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &bitbucket {
+//     color: $white;
+//     background-color: $bitbucket;
+
+//     &:hover {
+//       background-color: rgba($bitbucket, 0.1);
+//       color: $bitbucket;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($bitbucket, 0.2);
+//       background-color: rgba($bitbucket, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-bitbucket {
+//     color: $bitbucket;
+//     background-color: rgba($bitbucket, 0.1);
+
+//     &:hover {
+//       background-color: $bitbucket;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($bitbucket, 0.2);
+//       background-color: rgba($bitbucket, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-bitbucket {
+//     color: $bitbucket;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $bitbucket;
+
+//     &:hover {
+//       background-color: $bitbucket;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($bitbucket, 0.2);
+//       background-color: rgba($bitbucket, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &dropbox {
+//     color: $white;
+//     background-color: $dropbox;
+
+//     &:hover {
+//       background-color: rgba($dropbox, 0.1);
+//       color: $dropbox;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($dropbox, 0.2);
+//       background-color: rgba($dropbox, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-dropbox {
+//     color: $dropbox;
+//     background-color: rgba($dropbox, 0.1);
+
+//     &:hover {
+//       background-color: $dropbox;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($dropbox, 0.2);
+//       background-color: rgba($dropbox, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-dropbox {
+//     color: $dropbox;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $dropbox;
+
+//     &:hover {
+//       background-color: $dropbox;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($dropbox, 0.2);
+//       background-color: rgba($dropbox, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &foursquare {
+//     color: $white;
+//     background-color: $foursquare;
+
+//     &:hover {
+//       background-color: rgba($foursquare, 0.1);
+//       color: $foursquare;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($foursquare, 0.2);
+//       background-color: rgba($foursquare, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-foursquare {
+//     color: $facebook;
+//     background-color: rgba($foursquare, 0.1);
+
+//     &:hover {
+//       background-color: $foursquare;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($foursquare, 0.2);
+//       background-color: rgba($foursquare, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-foursquare {
+//     color: $foursquare;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $foursquare;
+
+//     &:hover {
+//       background-color: $foursquare;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($foursquare, 0.2);
+//       background-color: rgba($foursquare, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &github {
+//     color: $white;
+//     background-color: $github;
+
+//     &:hover {
+//       background-color: rgba($github, 0.1);
+//       color: $github;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($github, 0.2);
+//       background-color: rgba($github, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-github {
+//     color: $github;
+//     background-color: rgba($github, 0.1);
+
+//     &:hover {
+//       background-color: $github;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($github, 0.2);
+//       background-color: rgba($github, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-github {
+//     color: $github;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $github;
+
+//     &:hover {
+//       background-color: $github;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($github, 0.2);
+//       background-color: rgba($github, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &vk {
+//     color: $white;
+//     background-color: $vk;
+
+//     &:hover {
+//       background-color: rgba($vk, 0.1);
+//       color: $vk;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($vk, 0.2);
+//       background-color: rgba($vk, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &soft-vk {
+//     color: $vk;
+//     background-color: rgba($vk, 0.1);
+
+//     &:hover {
+//       background-color: $vk;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($vk, 0.2);
+//       background-color: rgba($vk, 0.8);
+//       color: $white;
+//     }
+//   }
+
+//   &outline-vk {
+//     color: $vk;
+//     background-image: none;
+//     background-color: transparent;
+//     border-color: $vk;
+
+//     &:hover {
+//       background-color: $vk;
+//       color: $white;
+//     }
+
+//     &:focus {
+//       box-shadow: 0 0 0 0.1rem rgba($vk, 0.2);
+//       background-color: rgba($vk, 0.8);
+//       color: $white;
+//     }
+//   }
+// }
+
+/*btn-gradient-primary*/
+
+// .btn-gradient-primary {
+//   background: linear-gradient(14deg, $primary 0%, rgba($primary, .6));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($primary, .5);
+//   border: none;
+// }
+
+// .btn-gradient-primary:hover,
+// .btn-gradient-primary:focus,
+// .btn-gradient-primary:active,
+// .btn-gradient-primary.active,
+// .btn-gradient-primary.focus,
+// .btn-gradient-primary:active,
+// .btn-gradient-primary:focus,
+// .btn-gradient-primary:hover,
+// .open>.dropdown-toggle.btn-gradient-primary,
+// .btn-gradient-primary.active,
+// .btn-gradient-primary:active,
+// .show>.btn-gradient-primary.dropdown-toggle {
+//   background: linear-gradient(14deg, $primary 0%, rgba($primary, .6));
+//   color: $white;
+// }
+
+// .btn-gradient-primary:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-primary.dropdown-toggle:focus,
+// .btn-gradient-primary.focus,
+// .btn-gradient-primary:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($primary, .3);
+//   box-shadow: 0 0 0 2px rgba($primary, .3);
+// }
+
+// /*btn-gradient-success*/
+
+// .btn-gradient-success {
+//   background: linear-gradient(14deg, $success 0%, rgba($success, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($success, .5);
+//   border: none;
+// }
+
+// .btn-gradient-success:hover,
+// .btn-gradient-success:focus,
+// .btn-gradient-success:active,
+// .btn-gradient-success.active,
+// .btn-gradient-success.focus,
+// .btn-gradient-success:active,
+// .btn-gradient-success:focus,
+// .btn-gradient-success:hover,
+// .open>.dropdown-toggle.btn-gradient-success,
+// .btn-gradient-success.active,
+// .btn-gradient-success:active,
+// .show>.btn-gradient-success.dropdown-toggle {
+//   background: linear-gradient(14deg, $success 0%, rgba($success, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-success:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-success.dropdown-toggle:focus,
+// .btn-gradient-success.focus,
+// .btn-gradient-success:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($success, .3);
+//   box-shadow: 0 0 0 2px rgba($success, .3);
+// }
+
+/*btn-gradient-secondary*/
+
+// .btn-gradient-secondary {
+//   background: linear-gradient(14deg, $secondary 0%, rgba($secondary, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($secondary, .5);
+//   border: none;
+// }
+
+// .btn-gradient-secondary:hover,
+// .btn-gradient-secondary:focus,
+// .btn-gradient-secondary:active,
+// .btn-gradient-secondary.active,
+// .btn-gradient-secondary.focus,
+// .btn-gradient-secondary:active,
+// .btn-gradient-secondary:focus,
+// .btn-gradient-secondary:hover,
+// .open>.dropdown-toggle.btn-gradient-secondary,
+// .btn-gradient-secondary.active,
+// .btn-gradient-secondary:active,
+// .show>.btn-gradient-secondary.dropdown-toggle {
+//   background: linear-gradient(14deg, $secondary 0%, rgba($secondary, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-secondary:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-secondary.dropdown-toggle:focus,
+// .btn-gradient-secondary.focus,
+// .btn-gradient-secondary:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($secondary, .3);
+//   box-shadow: 0 0 0 2px rgba($secondary, .3);
+// }
+
+/*btn-gradient-danger*/
+
+// .btn-gradient-danger {
+//   background: linear-gradient(14deg, $danger 0%, rgba($danger, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($danger, .5);
+//   border: none;
+// }
+
+// .btn-gradient-danger:hover,
+// .btn-gradient-danger:focus,
+// .btn-gradient-danger:active,
+// .btn-gradient-danger.active,
+// .btn-gradient-danger.focus,
+// .btn-gradient-danger:active,
+// .btn-gradient-danger:focus,
+// .btn-gradient-danger:hover,
+// .open>.dropdown-toggle.btn-gradient-danger,
+// .btn-gradient-danger.active,
+// .btn-gradient-danger:active,
+// .show>.btn-gradient-danger.dropdown-toggle {
+//   background: linear-gradient(14deg, $danger 0%, rgba($danger, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-danger:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-danger.dropdown-toggle:focus,
+// .btn-gradient-danger.focus,
+// .btn-gradient-danger:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($danger, .3);
+//   box-shadow: 0 0 0 2px rgba($danger, .3);
+// }
+
+/*btn-gradient-warning*/
+
+// .btn-gradient-warning {
+//   background: linear-gradient(14deg, $warning 0%, rgba($warning, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($warning, .5);
+//   border: none;
+// }
+
+// .btn-gradient-warning:hover,
+// .btn-gradient-warning:focus,
+// .btn-gradient-warning:active,
+// .btn-gradient-warning.active,
+// .btn-gradient-warning.focus,
+// .btn-gradient-warning:active,
+// .btn-gradient-warning:focus,
+// .btn-gradient-warning:hover,
+// .open>.dropdown-toggle.btn-gradient-warning,
+// .btn-gradient-warning.active,
+// .btn-gradient-warning:active,
+// .show>.btn-gradient-warning.dropdown-toggle {
+//   background: linear-gradient(14deg, $warning 0%, rgba($warning, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-warning:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-warning.dropdown-toggle:focus,
+// .btn-gradient-warning.focus,
+// .btn-gradient-warning:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($warning, .3);
+//   box-shadow: 0 0 0 2px rgba($warning, .3);
+// }
+
+/*btn-gradient-info*/
+
+// .btn-gradient-info {
+//   background: linear-gradient(14deg, $info 0%, rgba($info, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($info, .5);
+//   border: none;
+// }
+
+// .btn-gradient-info:hover,
+// .btn-gradient-info:focus,
+// .btn-gradient-info:active,
+// .btn-gradient-info.active,
+// .btn-gradient-info.focus,
+// .btn-gradient-info:active,
+// .btn-gradient-info:focus,
+// .btn-gradient-info:hover,
+// .open>.dropdown-toggle.btn-gradient-info,
+// .btn-gradient-info.active,
+// .btn-gradient-info:active,
+// .show>.btn-gradient-info.dropdown-toggle {
+//   background: linear-gradient(14deg, $info 0%, rgba($info, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-info:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-info.dropdown-toggle:focus,
+// .btn-gradient-info.focus,
+// .btn-gradient-info:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($info, .3);
+//   box-shadow: 0 0 0 2px rgba($info, .3);
+// }
+
+/*btn-gradient-dark*/
+
+// .btn-gradient-dark {
+//   background: linear-gradient(14deg, $dark 0%, rgba($dark, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($dark, .5);
+//   border: none;
+// }
+
+// .btn-gradient-dark:hover,
+// .btn-gradient-dark:focus,
+// .btn-gradient-dark:active,
+// .btn-gradient-dark.active,
+// .btn-gradient-dark.focus,
+// .btn-gradient-dark:active,
+// .btn-gradient-dark:focus,
+// .btn-gradient-dark:hover,
+// .open>.dropdown-toggle.btn-gradient-dark,
+// .btn-gradient-dark.active,
+// .btn-gradient-dark:active,
+// .show>.btn-gradient-dark.dropdown-toggle {
+//   background: linear-gradient(14deg, $dark 0%, rgba($dark, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-dark:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-dark.dropdown-toggle:focus,
+// .btn-gradient-dark.focus,
+// .btn-gradient-dark:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($dark, .3);
+//   box-shadow: 0 0 0 2px rgba($dark, .3);
+// }
+
+
+
+/*btn-gradient-pink*/
+
+// .btn-gradient-pink {
+//   background: linear-gradient(14deg, $pink 0%, rgba($pink, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($pink, .5);
+//   border: none;
+// }
+
+// .btn-gradient-pink:hover,
+// .btn-gradient-pink:focus,
+// .btn-gradient-pink:active,
+// .btn-gradient-pink.active,
+// .btn-gradient-pink.focus,
+// .btn-gradient-pink:active,
+// .btn-gradient-pink:focus,
+// .btn-gradient-pink:hover,
+// .open>.dropdown-toggle.btn-gradient-pink,
+// .btn-gradient-pink.active,
+// .btn-gradient-pink:active,
+// .show>.btn-gradient-pink.dropdown-toggle {
+//   background: linear-gradient(14deg, $pink 0%, rgba($pink, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-pink:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-pink.dropdown-toggle:focus,
+// .btn-gradient-pink.focus,
+// .btn-gradient-pink:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($pink, .3);
+//   box-shadow: 0 0 0 2px rgba($pink, .3);
+// }
+
+/*btn-gradient-purple*/
+
+// .btn-gradient-purple {
+//   background: linear-gradient(14deg, $purple 0%, rgba($purple, .7));
+//   color: $white;
+//   box-shadow: 0 7px 14px 0 rgba($purple, .5);
+//   border: none;
+// }
+
+// .btn-gradient-purple:hover,
+// .btn-gradient-purple:focus,
+// .btn-gradient-purple:active,
+// .btn-gradient-purple.active,
+// .btn-gradient-purple.focus,
+// .btn-gradient-purple:active,
+// .btn-gradient-purple:focus,
+// .btn-gradient-purple:hover,
+// .open>.dropdown-toggle.btn-gradient-purple,
+// .btn-gradient-purple.active,
+// .btn-gradient-purple:active,
+// .show>.btn-gradient-purple.dropdown-toggle {
+//   background: linear-gradient(14deg, $purple 0%, rgba($purple, .7));
+//   color: $white;
+// }
+
+// .btn-gradient-purple:not(:disabled):not(.disabled):active:focus,
+// .show>.btn-gradient-purple.dropdown-toggle:focus,
+// .btn-gradient-purple.focus,
+// .btn-gradient-purple:focus {
+//   -webkit-box-shadow: 0 0 0 2px rgba($purple, .3);
+//   box-shadow: 0 0 0 2px rgba($purple, .3);
+// }
+
+.dropdown-menu {
+  .dropdown-item {
+    .dropdown-icon {
+      font-size: $fs-18;
+      margin-right: 10px;
+      width: 18px;
+      opacity: 0.5;
+    }
+  }
+
+  &.dropdown-menu-dark {
+    background: $primary;
+    border-color: $white;
+    color: $white;
+
+    .dropdown-header,
+    .dropdown-item-text {
+      color: rgba($white, 0.6);
+    }
+
+    .dropdown-item {
+      color: $gray_200;
+
+      &:focus:not(.active):not(.disabled),
+      &:hover:not(.active):not(.disabled) {
+        background-color: rgba($white, 0.3);
+        color: $white;
+      }
+
+      &.active,
+      &:active {
+        color: $white;
+      }
+
+      &:disabled,
+      &.disabled {
+        color: rgba($white, 0.3);
+      }
+    }
+
+    .dropdown-divider {
+      border-color: rgba($white, 0.3);
+    }
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-close {
+  background-size: 0.8em;
+}

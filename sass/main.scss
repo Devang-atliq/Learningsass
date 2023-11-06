@@ -1,44 +1,367 @@
+$bodyfont: 'Roboto Flex',
+    sans-serif;
+$headingfont: 'Monda', sans-serif;
 
-// Extra colors 25 git
-// -------------------------
+// Shadow
+$shadow: 0 6px 20px rgba(36, 37, 38, 0.08);
+$shadow-md: 1px 0px 20px rgba(96, 93, 175, 0.05);
 
-$linkColor: #08c !default;
-$tableBackgroundAccent: #f9f9f9 !default;
-$tableBackgroundHover: #f5f5f5 !default;
-$btnInfoBackground: #5bc0de !default;
-$btnInfoBackgroundHighlight: #2f96b4 !default;
-$btnSuccessBackground: #62c462 !default;
-$btnSuccessBackgroundHighlight: #51a351 !default;
-$btnDangerBackground: #ee5f5b !default;
-$btnDangerBackgroundHighlight: #bd362f !default;
-$btnInverseBackground: #444 !default;
-$inputBorder: #ccc !default;
-$dropdownDividerTop: #e5e5e5 !default;
-$navbarText: #777 !default;
-$navbarInverseBackground: #111111 !default;
-$navbarInverseBackgroundHighlight: #222222 !default;
-$navbarInverseBorder: #252525 !default;
-$paginationBorder: #ddd !default;
-$warningText: #c09853 !default;
-$warningBackground: #fcf8e3 !default;
-$errorText: #b94a48 !default;
-$errorBackground: #f2dede !default;
-$successText: #468847 !default;
-$successBackground: #dff0d8 !default;
-$infoText: #3a87ad !default;
-$infoBackground: #d9edf7 !default;
+// varible
+$white: #FFFFFF;
+$black: #000000;
+$blue: #6658CA !default;
+$color-secondary: #232433;
+$red: #CF2727;
+$green: #11BA69;
+$orange: #E88034;
+$bg-500: #F1F6F9;
+$text-dark: #1D242B;
+$text-light: #6e7377;
+$outline: #E6E8EE;
+$placeholder: #A2A5A8;
+$outline-100: #f5f6f8;
+$info: #1173BA;
+$yellow-web: #FECC08;
+$background: #FAFAFA;
+
+$primary: $blue;
+$secondary: $color-secondary;
+$success: $green;
+$dark: $text-dark;
+$danger: $red;
+$orange: $orange;
+$bg-500: $bg-500;
+$outline: $outline;
+$text-light: $text-light;
+
+
+
+$theme-colors: (
+    "primary": $blue,
+    "secondary": $color-secondary,
+    "success": $green,
+    "orange": $orange,
+    "danger": $danger,
+    "dark": $dark,
+    "white":$white,
+    "black":$black
+);
+
+
+$p100: 100%;
+
+$sidebar-w: 210px;
+$header-h-max: 120px;
+$main-header-nav: 60px;
+$default-border-radius: 4px;
+$border-circle: 50%;
+$mini-sidebar-w: 60px;
+$default-gutter: 1.5rem;
+
+// Color system
+$body: #FAFBFC;
+
+// gray color varible
+$gray-100: #F6F9FB !default;
+$gray-200: #F0F3F6 !default;
+$gray-300: #E5E7F0 !default;
+$gray-400: #B6B6C4 !default;
+$gray-500: #A2A6B8 !default;
+$gray-600: #7F839A !default;
+$gray-700: #5F6379 !default;
+$gray-800: #404355 !default;
+$gray-900: #191D33 !default;
+$text-300: #6e7377 !default;
+$utilities-text-emphasis-colors: (
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900,
+    "dark-300": $text-300,
+);
+
+//sizes varible
+$fs-0: 0;
+$fs-8: 0.5rem;
+$fs-10: 0.625rem;
+$fs-12: 0.75rem;
+$fs-14: 0.875rem;
+$fs-16: 1rem;
+$fs-18: 1.125rem;
+$fs-20: 1.25rem;
+$fs-22: 1.375rem;
+$fs-24: 1.5rem;
+$fs-26: 1.625rem;
+$fs-28: 1.75rem;
+$fs-30: 1.875rem;
+$fs-32: 2rem;
+$fs-34: 2.125rem;
+$fs-36: 2.25rem;
+$fs-38: 2.375rem;
+$fs-40: 2.5rem;
+$fs-42: 2.625rem;
+$fs-44: 2.75rem;
+$fs-46: 2.875rem;
+$fs-48: 3rem;
+$fs-50: 3.125rem;
+$fs-56: 3.5rem;
+$fs-60: 3.75rem;
+$fs-72: 4.5rem;
+$fs-76: 4.75rem;
+$fs-78: 4.875rem;
+$fs-80: 5rem;
+$fs-100: 6.25rem;
+$fs-120: 7.5rem;
+$fs-140: 8.75rem;
+$fs-180: 11.25rem;
+$fs-200: 12.5rem;
+
+//daynamic font size end
+
+$fs: (
+    0: 0,
+    2: 0.125rem,
+    4: 0.25rem,
+    6: 0.375rem,
+    8: 0.5rem,
+    10: 0.625rem,
+    11: 0.688rem,
+    12: 0.75rem,
+    13: 0.813rem,
+    14: 0.875rem,
+    16: 1rem,
+    18: 1.125rem,
+    20: 1.25rem,
+    22: 1.375rem,
+    24: 1.5rem,
+    26: 1.625rem,
+    28: 1.75rem,
+    30: 1.875rem,
+    32: 2rem,
+    34: 2.125rem,
+    36: 2.25rem,
+    38: 2.375rem,
+    40: 2.5rem,
+    42: 2.625rem,
+    44: 2.75rem,
+    46: 2.875rem,
+    48: 3rem,
+    50: 3.125rem,
+    52: 3.25rem,
+    54: 3.375rem,
+    56: 3.5rem,
+    58: 3.625rem,
+    60: 3.75rem,
+    62: 3.875,
+    64: 4rem,
+    66: 4.125rem,
+    68: 4.25rem,
+    70: 4.375rem,
+    72: 4.5rem,
+    76: 4.75rem,
+    78: 4.875rem,
+    80: 5rem,
+    100: 6.25rem,
+    120: 7.5rem,
+    140: 8.75rem,
+    180: 11.25rem,
+    200: 12.5rem,
+    ) !default;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+    xxxl: 1599px
+);
+
+// $container-max-widths: (
+//     sm: 540px,
+//     md: 720px,
+//     lg: 960px,
+//     xl: 1140px,
+//     xxl: 1320px,
+//     xxxl: 1580px
+// );
+
+
+$grid-gutter-width: 1.25rem;
+
+$font-size-base: .875rem !default; // Assumes the browser default, typically `16px`
+$border-color: $outline;
+$border-width: 1px;
+$border-widths: (
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+);
+$border-radius: .5rem; //8px
+$border-radius-sm: .25rem; // 4
+$border-radius-lg: .5rem; //8
+$border-radius-xl: 1rem; //16
+$border-radius-xxl: 2rem; //32
+$border-radius-pill: 50rem; //800
+
+
+$accordion-icon-color: $text-light;
+$accordion-icon-active-color: $text-dark;
+$accordion-button-icon: url("../../assets/images/plus.svg");
+$accordion-button-active-icon: url("../../assets/images/minus.svg");
 
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
 $utilities: (
-    
+    "font-size": (property: font-size,
+        rfs: true,
+        responsive:true,
+        class: fs,
+        values: $fs),
+    "font-weight":(property: font-weight,
+        class:fw,
+        values:(100-t: 100,
+            200-el:200,
+            300-l: 300,
+            400-r: 400,
+            500-m: 500,
+            600-sb:600,
+            700-b: 700,
+            800-eb:800,
+            900-b: 900,
+            1000-w:1000,
+        )),
+    "font-family": (property: font-family,
+        class: font,
+        values: ("roboto": var(--#{$prefix}font-roboto),
+        )),
+    "text-color": (property: color,
+        class:text,
+        state:hover,
+        values:map-merge($theme-colors, ("white":$white))),
+    "border-color": (property: border-color,
+        state:hover,
+        class: border,
+        values:map-merge($theme-colors, ("white":$white))),
+    "border-width": (property: border-width,
+        class: border,
+        values: $border-widths ),
+    "margin-start": (responsive: true,
+        property: margin-left,
+        class: ms,
+        values: (auto:auto,
+            150:150px,
+            240:240px,
+        )),
+    "rounded": (property: border-radius,
+        class: rounded,
+        responsive:true,
+        values:(null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: var(--#{$prefix}border-radius-sm),
+            2: var(--#{$prefix}border-radius),
+            3: var(--#{$prefix}border-radius-lg),
+            4: var(--#{$prefix}border-radius-xl),
+            5: var(--#{$prefix}border-radius-xxl),
+            circle: 50%,
+            pill: var(--#{$prefix}border-radius-pill))),
+    "rounded-start": (property: border-bottom-left-radius border-top-left-radius,
+        class: rounded-start,
+        responsive:true,
+        values: (null: var(--#{$prefix}border-radius),
+            0: 0,
+            1: var(--#{$prefix}border-radius-sm),
+            2: var(--#{$prefix}border-radius),
+            3: var(--#{$prefix}border-radius-lg),
+            4: var(--#{$prefix}border-radius-xl),
+            5: var(--#{$prefix}border-radius-xxl),
+            circle: 50%,
+            pill: var(--#{$prefix}border-radius-pill))),
 );
 
-// @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+
+// custome & reset
+
+@import "./mixin";
+@import "./responsive";
+@import "./width_height";
+@import "./padding_margin";
+@import "./reset_basic";
+
+//layout
+@import "./layout/layout";
+@import "./layout/menu_style.scss";
+@import "./layout/sidebar.scss";
+
+//UI
+@import 'ui/buttons';
+@import 'ui/background';
+@import 'ui/text-color';
+@import 'ui/tooltip';
+@import 'ui/dropdown';
+@import 'ui/datatable';
+@import 'ui/avatar';
+@import 'ui/badge-color';
+@import 'ui/alerts';
+@import 'ui/table';
+@import 'ui/card';
+@import 'ui/modals';
+@import 'ui/nav';
+@import 'ui/pagination';
+@import 'ui/progress';
+@import 'ui/waves';
+
+//components
+@import 'components/custom-scrollbar';
+// @import 'components/cropper';
+@import 'components/icons';
+// @import 'components/shadow';
+// @import 'components/form_element';
+// @import 'components/charts';
+// @import 'components/accordion';
+// @import 'components/nastable';
+// @import 'components/fancy_fileupload';
+
+//pages
+// @import 'pages/chat';
+// @import 'pages/email';
+// @import 'pages/todo';
+// @import 'pages/calendar';
+// @import 'pages/filemanager';
+// @import 'pages/ecommerce';
+// @import 'pages/faq';
+// @import 'pages/activity';
+// @import 'pages/plans';
+// @import 'pages/success';
+// @import 'pages/user';
+// @import 'pages/notification';
+// @import 'pages/support';
+// @import 'pages/faq';
+// @import 'pages/transaction';
+// @import 'pages/order';
+// @import 'pages/homepage';
+// @import 'pages/emailer.scss';
+
+
+// @import 'auth/auth';
+
+
+
+
+
+
 body {
-    background: $infoText;
+    background: $outline;
 }

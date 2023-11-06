@@ -1,0 +1,298 @@
+//
+// avatar
+// 
+
+.avatar-box {
+  position: relative;
+  display: inline-block;
+
+  .avatar-title {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: $gray-100;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.avatar-md {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-block;
+}
+
+// Thumb sizes+
+.thumb-xxs {
+  height: 24px !important;
+  width: 24px !important;
+  font-size: $fs-10;
+  font-weight: 700;
+}
+
+.thumb-xs {
+  height: 32px !important;
+  width: 32px !important;
+  font-size: $fs-10;
+  font-weight: 700;
+}
+
+.thumb-sm {
+  height: 36px !important;
+  width: 36px !important;
+  font-size: $fs-12;
+  font-weight: 700;
+}
+
+.thumb-md {
+  height: 48px;
+  width: 48px;
+  font-size: $fs-14;
+  font-weight: 700;
+}
+
+.thumb-lg {
+  height: 60px;
+  width: 60px;
+  font-size: $fs-20;
+  font-weight: 700;
+}
+
+.thumb-xl {
+  height: 78px;
+  width: 78px;
+  font-size: $fs-26;
+  font-weight: 700;
+}
+
+.img-group {
+  display: inline-block;
+
+  .avatar-badge {
+    position: absolute;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 0 2px $white;
+    z-index: 2;
+  }
+
+  .notification-badge {
+    position: absolute;
+    right: -6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 2px $white;
+    z-index: 2;
+    font-size: $fs-10;
+    text-align: center;
+    overflow: hidden;
+
+    p {
+      margin-bottom: 0;
+      width: 2ch;
+      color: $white;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0 auto;
+      line-height: normal;
+    }
+  }
+
+  .user-avatar+.user-avatar-group {
+    margin-left: -10px;
+  }
+
+  .user-avatar {
+    position: relative;
+    margin-bottom: 0;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+
+    &-xxs {
+      height: 24px !important;
+      width: 24px !important;
+      font-size: $fs-10;
+      font-weight: 700;
+
+      &+.user-avatar-group {
+        margin-left: -10px;
+      }
+    }
+
+    &-xs {
+      height: 32px !important;
+      width: 32px !important;
+      font-size: $fs-10;
+      font-weight: 700;
+
+      &+.user-avatar-group {
+        margin-left: -10px;
+      }
+    }
+
+    &-sm {
+      height: 36px !important;
+      width: 36px !important;
+      font-size: $fs-12;
+      font-weight: 700;
+
+      &+.user-avatar-group {
+        margin-left: -12px;
+      }
+    }
+
+    &-md {
+      height: 48px;
+      width: 48px;
+      font-size: $fs-14;
+      font-weight: 700;
+
+      &+.user-avatar-group {
+        margin-left: -14px;
+      }
+
+      .avatar-badge {
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 3px $white;
+      }
+    }
+
+    &-lg {
+      height: 60px;
+      width: 60px;
+      font-size: $fs-20;
+      font-weight: 700;
+
+      &+.user-avatar-group {
+        margin-left: -20px;
+      }
+
+      .avatar-badge {
+        width: 12px;
+        height: 12px;
+        box-shadow: 0 0 0 3px $white;
+      }
+    }
+
+    &-xl {
+      height: 78px;
+      width: 78px;
+      font-size: $fs-26;
+      font-weight: 700;
+
+      &+.user-avatar-group {
+        margin-left: -26px;
+      }
+
+      .avatar-badge {
+        width: 14px;
+        height: 14px;
+        box-shadow: 0 0 0 3px $white;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    &:focus,
+    &:hover {
+      z-index: 2;
+    }
+
+    .online {
+      background: $success;
+    }
+
+    .offline {
+      background: $secondary;
+    }
+
+    .away {
+      background: $warning;
+    }
+
+    .donotdisturb {
+      background: $danger;
+    }
+
+    .notification {
+      background: $pink;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 0 0 2px $white;
+    }
+
+    .thumb-xxs {
+      height: 24px !important;
+      width: 24px !important;
+      font-size: $fs-10;
+      font-weight: 700;
+    }
+
+    .thumb-xs {
+      height: 32px !important;
+      width: 32px !important;
+      font-size: $fs-10;
+      font-weight: 700;
+    }
+
+    .thumb-sm {
+      height: 36px !important;
+      width: 36px !important;
+      font-size: $fs-12;
+      font-weight: 700;
+    }
+
+    .thumb-md {
+      height: 48px;
+      width: 48px;
+      font-size: $fs-14;
+      font-weight: 700;
+    }
+
+    .thumb-lg {
+      height: 60px;
+      width: 60px;
+      font-size: $fs-20;
+      font-weight: 700;
+    }
+
+    .thumb-xl {
+      height: 78px;
+      width: 78px;
+      font-size: $fs-26;
+      font-weight: 700;
+    }
+  }
+}
+
+.media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.media-body {
+  -ms-flex: 1;
+  flex: 1;
+}

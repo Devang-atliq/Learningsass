@@ -1,0 +1,37 @@
+
+.table thead tr th {
+    background: $outline-100;
+    color: $text-light;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: $bodyfont;
+}
+
+
+// pagination
+.dataTables_info {
+    margin: 20px 20px 30px 20px;
+    padding-top: 0 !important;
+    @include screen-md-max{
+        margin: 16px 16px 0 16px;       
+    }
+}
+
+
+.dataTables_paginate {   
+    .pagination {
+        margin: 20px 20px 30px 20px !important;        
+            @include screen-md-max {
+                margin: 16px 16px 0 16px !important;
+            }
+        .page-item {
+            .page-link {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-radius: 8px;
+                border: 1px solid $outline;
+                margin: 0 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,370 @@
+
+/*---Text Color---*/
+/*--!blue default-500--*/
+.text-placeholder{
+    color: $placeholder;
+}
+.text-primary,
+.text-blue {
+    color: $blue-500 !important;
+}
+
+.text-soft-primary,
+.text-soft-blue {
+    color: $blue-100 !important;
+}
+
+a {
+
+    &.text-primary,
+    &.text-blue {
+        @include hover-focus-state {
+            color: $blue-500 !important;
+        }
+    }
+}
+
+.hover-primary,
+.hover-blue {
+    @include hover-focus-state {
+        color: $blue-500 !important;
+    }
+}
+
+
+/*--!indigo default-500--*/
+.text-indigo {
+    color: $indigo-500 !important;
+}
+
+.text-soft-indigo {
+    color: $indigo-100 !important;
+}
+
+a {
+    &.text-indigo {
+        @include hover-focus-state {
+            color: $indigo-500 !important;
+        }
+    }
+}
+
+.hover-indigo {
+    @include hover-focus-state {
+        color: $indigo-500 !important;
+    }
+}
+
+/*--!purple default-500--*/
+.text-purple {
+    color: $purple-500 !important;
+}
+
+.text-soft-purple {
+    color: $purple-100 !important;
+}
+
+a {
+    &.text-purple {
+        @include hover-focus-state {
+            color: $purple-500 !important;
+        }
+    }
+}
+
+.hover-purple {
+    @include hover-focus-state {
+        color: $purple-500 !important;
+    }
+}
+
+/*--!pink default-500--*/
+.text-pink {
+    color: $pink-500 !important;
+}
+
+.text-soft-pink {
+    color: $pink-100 !important;
+}
+
+a {
+    &.text-pink {
+        @include hover-focus-state {
+            color: $pink-500 !important;
+        }
+    }
+}
+
+.hover-pink {
+    @include hover-focus-state {
+        color: $pink-500 !important;
+    }
+}
+
+/*--!red default-500--*/
+.text-danger,
+.text-red {
+    color: $red-500 !important;
+}
+
+.text-soft-danger,
+.text-soft-red {
+    color: $red-100 !important;
+}
+
+a {
+
+    &.text-danger,
+    &.text-red {
+        @include hover-focus-state {
+            color: $red-500 !important;
+        }
+    }
+}
+
+.hover-danger,
+.hover-red {
+    @include hover-focus-state {
+        color: $red-500 !important;
+    }
+}
+
+/*--!orange default-500--*/
+.text-orange {
+    color: $orange-500 !important;
+}
+
+.text-soft-orange {
+    color: $orange-100 !important;
+}
+
+a {
+    &.text-orange {
+        @include hover-focus-state {
+            color: $orange-500 !important;
+        }
+    }
+}
+
+.hover-orange {
+    @include hover-focus-state {
+        color: $orange-500 !important;
+    }
+}
+
+/*--!yellow default-500--*/
+.text-warning,
+.text-yellow {
+    color: $yellow-500 !important;
+}
+
+.text-soft-warning,
+.text-soft-yellow {
+    color: $yellow-100 !important;
+}
+
+a {
+
+    &.text-warning,
+    &.text-yellow {
+        @include hover-focus-state {
+            color: $yellow-500 !important;
+        }
+    }
+}
+
+.hover-warning,
+.hover-yellow {
+    @include hover-focus-state {
+        color: $yellow-500 !important;
+    }
+}
+
+/*--!green default-500--*/
+.text-success,
+.text-green {
+    color: $green-500 !important;
+}
+
+.text-soft-success,
+.text-soft-green {
+    color: $green-100 !important;
+}
+
+a {
+
+    &.text-success,
+    &.text-green {
+        @include hover-focus-state {
+            color: $green-500 !important;
+        }
+    }
+}
+
+.text-success,
+.hover-green {
+    @include hover-focus-state {
+        color: $green-500 !important;
+    }
+}
+
+/*--!teal default-500--*/
+.text-teal {
+    color: $teal-500 !important;
+}
+
+.text-soft-teal {
+    color: $teal-100 !important;
+}
+
+a {
+    &.text-teal {
+        @include hover-focus-state {
+            color: $teal-500 !important;
+        }
+    }
+}
+
+.hover-teal {
+    @include hover-focus-state {
+        color: $teal-500 !important;
+    }
+}
+
+/*--!cyan default-500--*/
+.text-info,
+.text-cyan {
+    color: $cyan-500 !important;
+}
+
+.text-soft-info,
+.text-soft-cyan {
+    color: $cyan-100 !important;
+}
+
+a {
+
+    &.text-info,
+    &.text-cyan {
+        @include hover-focus-state {
+            color: $cyan-500 !important;
+        }
+    }
+}
+
+.hover-info,
+.hover-cyan {
+    @include hover-focus-state {
+        color: $cyan-500 !important;
+    }
+}
+
+/*--!gray default-500--*/
+.text-gray {
+    color: $gray-500 !important;
+}
+
+.text-soft-gray {
+    color: $gray-100 !important;
+}
+
+a {
+    &.text-gray {
+        @include hover-focus-state {
+            color: $gray-500 !important;
+        }
+    }
+}
+
+.hover-gray {
+    @include hover-focus-state {
+        color: $gray-500 !important;
+    }
+}
+
+/*--!gray 900--*/
+.text-dark {
+    color: $gray-900 !important;
+}
+
+.text-soft-dark {
+    color: $gray-600 !important;
+}
+
+a {
+    &.text-dark {
+        @include hover-focus-state {
+            color: $gray-900;
+        }
+    }
+}
+
+.hover-dark {
+    @include hover-focus-state {
+        color: $gray-900 !important;
+    }
+}
+
+/*--!gray 100 to 900--*/
+.text-gray-200 {
+    color: $gray-200 !important;
+}
+
+.text-gray-300 {
+    color: $gray-300 !important;
+}
+
+.text-gray-400 {
+    color: $gray-400 !important;
+}
+
+.text-gray-700 {
+    color: $gray-700 !important;
+}
+
+.text-gray-800 {
+    color: $gray-800 !important;
+}
+
+.text-fade {
+    color: $gray-300 !important;
+}
+
+.text-secondary {
+    color: $secondary !important;
+}
+.text-dark {
+    color: $text-dark !important;
+}
+.text-light {
+    color: $text-300 !important;
+}
+/*---text-white---*/
+// $text-white-map: (text-white-: color);
+// $sizes-list: 10 20 30 40 50 60 70 80 90;
+
+// @each $size in $sizes-list {
+//     $val: rgba($white, $size/100) !important;
+
+//     @each $keyword,
+//     $property in $text-white-map {
+//         .#{$keyword}#{$size} {
+//             #{$property}: $val;
+//         }
+//     }
+// }
+
+/*---text-black---*/
+// $text-black-map: (text-black-: color);
+// $sizes-list: 10 20 30 40 50 60 70 80 90;
+
+// @each $size in $sizes-list {
+//     $val: rgba($black, $size/100) !important;
+
+//     @each $keyword,
+//     $property in $text-black-map {
+//         .#{$keyword}#{$size} {
+//             #{$property}: $val;
+//         }
+//     }
+// }

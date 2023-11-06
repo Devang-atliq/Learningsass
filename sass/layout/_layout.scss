@@ -1,0 +1,116 @@
+/*---Layout---*/
+.fixed .wrapper,
+.main-header .logo,
+.user-panel {
+    overflow: hidden;
+}
+
+.content-wrapper,
+.main-footer {
+    @include transition(transform .3s ease-in-out, margin .3s ease-in-out);
+    margin-left: $sidebar-w;
+    z-index: 820;
+}
+
+@include screen-md {
+
+    .sidebar-collapse .content-wrapper,
+    .sidebar-collapse .main-footer {
+        margin-left: 0;
+    }
+}
+
+.content-wrapper {
+    min-height: $p100;
+    background-color: transparent;
+    @include transition(all .3s ease-in-out);
+    overflow: visible;
+}
+
+.main-footer {
+    background-color: rgba($white, 1);
+    padding: 8px;
+    border-top: 1px solid rgba($black, 0.03);
+    z-index: 1;
+    position: relative;
+
+    .nav {
+        margin-top: -10px;
+    }
+}
+
+.fixed {
+    .left-side {
+        position: fixed;
+    }
+
+    .main-header {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .main-sidebar {
+        position: fixed;
+    }
+
+    .content-wrapper {
+        padding-top: $main-header-nav;
+    }
+
+    .right-side {
+        padding-top: $main-header-nav;
+    }
+}
+
+@include screen-sm-max {
+    .content-wrapper {
+        margin-left: 0;
+    }
+
+    .main-footer {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .fixed {
+        .content-wrapper {
+            padding-top: $main-header-nav;
+        }
+
+        .right-side {
+            padding-top: $main-header-nav;
+        }
+    }
+}
+
+.fixed {
+    &layout-boxed {
+        .wrapper {
+            max-width: $p100;
+        }
+    }
+}
+
+.hold-transition .content-wrapper,
+.hold-transition .left-side,
+.hold-transition .main-footer,
+.hold-transition .main-header .logo,
+.hold-transition .main-header .navbar,
+.hold-transition .main-sidebar,
+.hold-transition .menu-open .fa-angle-left,
+.hold-transition .right-side {
+    @include transition(none);
+}
+
+.content {
+    min-height: 250px;
+    padding: $default-gutter $default-gutter $default-gutter $default-gutter;
+    margin-right: auto;
+    margin-left: auto;
+    @include screen-sm-max{
+        padding: 0.5rem;
+    }
+}

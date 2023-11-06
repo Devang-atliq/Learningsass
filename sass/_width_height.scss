@@ -1,0 +1,1127 @@
+@import "./responsive";
+
+// Width & Height
+
+/*******************
+Width property 
+*******************/
+$num: 0;
+
+@while $num < 300 {
+    .w-px#{$num} {
+        width: $num + 0px !important;
+    }
+
+    .mi-w-px#{$num} {
+        min-width: $num + 0px !important;
+    }
+
+    .mx-w-px#{$num} {
+        max-width: $num + 0px !important;
+    }
+
+    $num: $num+10;
+}
+
+$num: 300;
+
+@while $num < 1000 {
+    .w-px#{$num} {
+        width: $num + 0px !important;
+    }
+
+    .mi-w-px#{$num} {
+        min-width: $num + 0px !important;
+    }
+
+    .mx-w-px#{$num} {
+        max-width: $num + 0px !important;
+    }
+
+    $num: $num+20;
+}
+
+$num: 0;
+
+@while $num < 105 {
+    .w-p#{$num} {
+        width: $num+ 0% !important;
+    }
+
+    .mi-w-p#{$num} {
+        min-width: $num+ 0% !important;
+    }
+
+    .mx-w-p#{$num} {
+        max-width: $num+ 0% !important;
+    }
+
+    $num: $num+5;
+}
+
+$width-auto: (w-: width, mi-w-: min-width, mx-w-: max-width);
+$sizes-list: auto;
+
+@each $size in $sizes-list {
+    $val: $size;
+
+    @each $keyword,
+    $property in $width-auto {
+        .#{$keyword}#{$size} {
+            #{$property}: $val;
+        }
+    }
+}
+
+@include screen-xs {
+    $num: 0;
+
+    @while $num < 300 {
+        .xs-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xs-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xs-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xs-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xs-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xs-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xs-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .xs-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .xs-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (xs-w-: width, xs-mi-w-: min-width, xs-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-sm {
+    $num: 0;
+
+    @while $num < 300 {
+        .sm-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .sm-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .sm-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .sm-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .sm-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .sm-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .sm-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .sm-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .sm-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (sm-w-: width, sm-mi-w-: min-width, sm-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-md {
+    $num: 0;
+
+    @while $num < 300 {
+        .md-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .md-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .md-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .md-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .md-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .md-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .md-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .md-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .md-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (md-w-: width, md-mi-w-: min-width, md-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-lg {
+    $num: 0;
+
+    @while $num < 300 {
+        .lg-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .lg-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .lg-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .lg-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .lg-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .lg-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .lg-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .lg-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .lg-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (lg-w-: width, lg-mi-w-: min-width, lg-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-xl {
+    $num: 0;
+
+    @while $num < 300 {
+        .xl-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xl-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xl-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xl-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xl-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xl-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xl-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .xl-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .xl-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (xl-w-: width, xl-mi-w-: min-width, xl-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-xxl {
+    $num: 0;
+
+    @while $num < 300 {
+        .xxl-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xxl-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xxl-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xxl-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xxl-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xxl-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xxl-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .xxl-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .xxl-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (xxl-w-: width, xxl-mi-w-: min-width, xxl-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-xxxl {
+    $num: 0;
+
+    @while $num < 300 {
+        .xxxl-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xxxl-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xxxl-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xxxl-w-px#{$num} {
+            width: $num + 0px !important;
+        }
+
+        .xxxl-mi-w-px#{$num} {
+            min-width: $num + 0px !important;
+        }
+
+        .xxxl-mx-w-px#{$num} {
+            max-width: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xxxl-w-p#{$num} {
+            width: $num+ 0% !important;
+        }
+
+        .xxxl-mi-w-p#{$num} {
+            min-width: $num+ 0% !important;
+        }
+
+        .xxxl-mx-w-p#{$num} {
+            max-width: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $width-auto: (xxxl-w-: width, xxxl-mi-w-: min-width, xxxl-mx-w-: max-width);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $width-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+
+/*******************
+Height property 
+*******************/
+
+$num: 0;
+
+@while $num < 300 {
+    .h-px#{$num} {
+        height: $num + 0px !important;
+    }
+
+    .mi-h-px#{$num} {
+        min-height: $num + 0px !important;
+    }
+
+    .mx-h-px#{$num} {
+        max-height: $num + 0px !important;
+    }
+
+    $num: $num+10;
+}
+
+$num: 160;
+
+@while $num < 1000 {
+    .h-px#{$num} {
+        height: $num + 0px !important;
+    }
+
+    .mi-h-px#{$num} {
+        min-height: $num + 0px !important;
+    }
+
+    .mx-h-px#{$num} {
+        max-height: $num + 0px !important;
+    }
+
+    $num: $num+20;
+}
+
+$num: 0;
+
+@while $num < 105 {
+    .h-p#{$num} {
+        height: $num+ 0% !important;
+    }
+
+    .mi-h-p#{$num} {
+        min-height: $num+ 0% !important;
+    }
+
+    .mx-h-p#{$num} {
+        max-height: $num+ 0% !important;
+    }
+
+    $num: $num+5;
+}
+
+$height-auto: (h-: height, mi-h-: min-height, mx-h-: max-height);
+$sizes-list: auto;
+
+@each $size in $sizes-list {
+    $val: $size;
+
+    @each $keyword,
+    $property in $height-auto {
+        .#{$keyword}#{$size} {
+            #{$property}: $val;
+        }
+    }
+}
+
+@include screen-xs {
+    $num: 0;
+
+    @while $num < 300 {
+        .xs-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xs-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xs-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xs-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xs-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xs-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xs-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .xs-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .xs-mx-h-p#{$num} {
+            max-height: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (xs-h-: height, xs-mi-h-: min-height, xs-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-sm {
+    $num: 0;
+
+    @while $num < 300 {
+        .sm-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .sm-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .sm-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .sm-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .sm-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .sm-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .sm-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .sm-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .sm-mx-h-p#{$num} {
+            max-height: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (sm-h-: height, sm-mi-h-: min-height, sm-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-md {
+    $num: 0;
+
+    @while $num < 300 {
+        .md-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .md-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .md-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .md-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .md-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .md-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .md-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .md-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .md-mx-h-p#{$num} {
+            max-height: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (md-h-: height, md-mi-h-: min-height, md-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-lg {
+    $num: 0;
+
+    @while $num < 300 {
+        .lg-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .lg-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .lg-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .lg-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .lg-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .lg-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .lg-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .lg-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .lg-mx-h-p#{$num} {
+            max-height: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (lg-h-: height, lg-mi-h-: min-height, lg-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-xl {
+    $num: 0;
+
+    @while $num < 300 {
+        .xl-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xl-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xl-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xl-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xl-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xl-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xl-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .xl-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .xl-mx-h-p#{$num} {
+            max-height: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (xl-h-: height, xl-mi-h-: min-height, xl-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-xxl {
+    $num: 0;
+
+    @while $num < 300 {
+        .xxl-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xxl-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xxl-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xxl-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xxl-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xxl-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xxl-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .xxl-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .xxl-mx-h-p#{$num} {
+            max-height: $num+ 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (xxl-h-: height, xxl-mi-h-: min-height, xxl-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
+
+@include screen-xxxl {
+    $num: 0;
+
+    @while $num < 300 {
+        .xxxl-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xxxl-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xxxl-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+10;
+    }
+
+    $num: 160;
+
+    @while $num < 1000 {
+        .xxxl-h-px#{$num} {
+            height: $num + 0px !important;
+        }
+
+        .xxxl-mi-h-px#{$num} {
+            min-height: $num + 0px !important;
+        }
+
+        .xxxl-mx-h-px#{$num} {
+            max-height: $num + 0px !important;
+        }
+
+        $num: $num+20;
+    }
+
+    $num: 0;
+
+    @while $num < 105 {
+        .xxxl-h-p#{$num} {
+            height: $num+ 0% !important;
+        }
+
+        .xxxl-mi-h-p#{$num} {
+            min-height: $num+ 0% !important;
+        }
+
+        .xxxl-mx-h-p#{$num} {
+            max-height: $num + 0% !important;
+        }
+
+        $num: $num+5;
+    }
+
+    $height-auto: (xxxl-h-: height, xxxl-mi-h-: min-height, xxxl-mx-h-: max-height);
+    $sizes-list: auto;
+
+    @each $size in $sizes-list {
+        $val: $size;
+
+        @each $keyword,
+        $property in $height-auto {
+            .#{$keyword}#{$size} {
+                #{$property}: $val;
+            }
+        }
+    }
+}
