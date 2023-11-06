@@ -1,4 +1,4 @@
-# [Learningsass](https://github.com/Devang-atliq/Learningsass)
+# [Learningsass](https://devang-atliq.github.io/Learningsass/)
 
 Packge.json file script setup and step basice project 
 
