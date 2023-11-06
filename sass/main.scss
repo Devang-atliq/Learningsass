@@ -1,5 +1,5 @@
 
-// Extra colors 25
+// Extra colors 25 git
 // -------------------------
 
 $linkColor: #08c !default;
@@ -29,6 +29,16 @@ $infoText: #3a87ad !default;
 $infoBackground: #d9edf7 !default;
 
 
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$utilities: (
+    
+);
+
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 body {
-    background: $infoBackground;
+    background: $infoText;
 }
