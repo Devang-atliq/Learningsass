@@ -4,7 +4,7 @@
   "description": "Packge.json file script setup and step basice project",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch sass:css",
+    "watch:sass": "sass --no-source-map --watch sass:assets/css",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass"
   },

@@ -302,8 +302,8 @@ $utilities: (
 
 //layout
 @import "./layout/layout";
-@import "./layout/menu_style.scss";
-@import "./layout/sidebar.scss";
+@import "./layout/menu_style";
+@import "./layout/sidebar";
 
 //UI
 @import 'ui/buttons';
@@ -352,7 +352,7 @@ $utilities: (
 // @import 'pages/transaction';
 // @import 'pages/order';
 // @import 'pages/homepage';
-// @import 'pages/emailer.scss';
+@import './pages/micro-animation';
 
 
 // @import 'auth/auth';
@@ -361,7 +361,22 @@ $utilities: (
 
 
 
+//icon + avtar size 
+$values: 32, 40, 50, 80;
 
-body {
-    background: $outline;
+@each $size in $values {
+    .icon-#{$size} {
+        font-size: $size;
+        height: $size;
+        width: $size;
+    }
+
+    .thumb-#{$size} {
+        border-radius: $size+px;
+        height: $size+px;
+        width: $size+px;
+    }
 }
+
+
+
